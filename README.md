@@ -1,10 +1,10 @@
 # MDLive SDK
-MDLIVE SDK Demo is an application intended to be a reference to show case MDLIVE SDK features, capabilities and integration.
+Our MDLIVE SDK Demo is a fully integrated application. It is shared as a reference to show case the MDLIVE SDK features, capabilities and integration.
 
 ## Integration
 This section describes the required `*.gradle` files configurations for obtaining the MDLive SDK. 
 
-Open your root project `build.gradle` file and update it with MDLive and AppBoy bintray dependencies.  
+Open your root project `build.gradle` file, and update it with MDLive and AppBoy bintray dependencies.  
 
 ```groovy
 buildscript {
@@ -35,9 +35,9 @@ allprojects {
 }
 ```
 
-**Note:** `MDL_android_sdk = "com.mdlive.mdla:android-sdk:4.0.4"` is used to define the version of the SDK to use, in this case we are using `4.0.4`. You will need to update this version for future features or bug fixes come with next versions.
+**Note:** `MDL_android_sdk = "com.mdlive.mdla:android-sdk:4.0.4"` is used to define the version of the SDK to use. As of the release of this readme, we are using `4.0.4`. You will need to update this attribute to pick up features or bug fixes, as suggested or broadcasted with future versions.
 
-Once root file is well configured, we need to configure our application `build.gradle` adding the respective dependencies:
+Once your root `build.gradle` file has been successfully configured, you will need to configure your application `build.gradle` adding the respective dependencies:
 
  ```groovy
  android {
@@ -57,12 +57,12 @@ Once root file is well configured, we need to configure our application `build.g
  }
  ```
  
- **Note:** `splits.abi.*` is used for allowing run the app in architectures different than `arm` like the `x86` emulators, you could remove this block but you will need to test your app in real devices with `arm` architectures.
+ **Note:** `splits.abi.*` allows you to run your app on alternative mobile hardware architectures, and Android Studio Emulators.  ( e.g. `x86` vs. `arm`). You can remove this block, but you will need to test your app on real devices using `arm` architectures.
  
 ## Configuration
-This section describes the required code configuration to before using the MDLive SDK.
+This section describes the required code configuration before using the MDLive SDK.
 
-If you are not using a custom Application class for your app you will need to create one, let's say you named it `DemoApplication` and should look like the one in this repo.
+If you are not using a custom Application class for your app, you will need to create one.  Let's say you named it `DemoApplication`.  Your class should look like the following:
 
 Your `DemoApplication` class must inherit from `MultiDexApplication`.
 
@@ -72,22 +72,25 @@ public class DemoApplication extends MultiDexApplication {
 }
 ```
 
-You will need to configure the MDLive SDK in the `onCreate` method by overriding it like this:
+You will need to configure the MDLive SDK in the `onCreate` method, by overriding it like this:
 ```java
 @Override
 public void onCreate() {
     super.onCreate();
     // Create a new configuration object.
     MdlConfiguration configuration = new MdlConfiguration();
-    // You can override the default analytics engine by your own engine entending from AnalyticsEngine.
+    
+    // You can override the default analytics engine by adding your own engine, and entending from AnalyticsEngine.
     configuration.addAnalyticsEngine(new ConsoleAnalyticsEngine());
+    
     // Here you can configure specific things like:
     configuration.getApplicationConstantsBuilder()
             .debug(BuildConfig.DEBUG) // This is for letting the SDK know if the app is runnning in Debug mode or not.
             .isSessionTimeoutEnabled(false) // This parameter is true by default, so after 5 minutes the user screen will be looked and be asked by MDLive credentials. We could disable this for SDK usages.
             .isSSOsession(true) // Since SDK uses the single sign on method to access the dashboard we must set this parameter to true.
             .defaultFirebaseFilename("mdlive__firebase_defaults.json"); // Here we pass the google play service json file name that must be in the assests directory.
-    // Initialize the MDLive SDK and make it ready for using it.
+            
+    // Initialize the MDLive SDK and make it ready for use.
     MdlBootstrap.start(this, configuration);
 }
 ```
@@ -101,7 +104,7 @@ public void onCreate() {
 | Eduardo Pool  | epool@nearsoft.com  | Senior Android Developer  |
 
 ## MDLive Sign In usage
-In order to access the MDLive dashboard you must to create a `MdlSSODetail` object with the required MDLive user information to access the MDLive dashboard.
+In order to access the MDLive dashboard, you must to create a `MdlSSODetail` object with the required MDLive user information.
 ```java
 Calendar birthdateCalendar = GregorianCalendar.getInstance();
 birthdateCalendar.set(1917, 0, 1);
@@ -125,7 +128,7 @@ MdlSSODetail ssoDetail = MdlSSODetail.builder()
         .build();
 ```
 
-Once `MdlSSODetail` is correctly created we can proceed to try a sign in with this info with:
+Once `MdlSSODetail` is correctly created, you can proceed to attempt a sign in with the following info:
 ```java
 MdlApplicationSupport.getAuthenticationCenter()
         .singleSignOn(ssoDetail)
@@ -162,11 +165,11 @@ git clone https://github.com/BreakthroughBehavioralInc/mdlive-sdk-demo.git
 import it with Android Studio once cloned and just run the demosdk application.
 
 ## Styling
-After running the DemoSDK application you will see a similar dashboard like this with default header and text:
+After running the DemoSDK application, you will see a similar dashboard like the following, which displays a default header and text:
 
 <img src="/images/Screenshot_1504298299.png?raw=true" width="320">
 
-You can update/change them overriding the next style attributes by creating your own theme extending from `rodeo__SSODashboardActivityStyle`. You will be able to:
+You can make changes to specific Dashboard attributes by overriding the corresponding style attributes, with your own customized theme, extending from `rodeo__SSODashboardActivityStyle`. You will be able to update:
 
 - Dashboard action bar icon or title text. (Icon has priority over text)
 - Update the text, text color, text appearance, background color of the header.
@@ -214,4 +217,4 @@ And finally overriding/applying this new theme to `MdlSSODashboardActivity` in y
     tools:replace="android:theme" />
 ```
 
-Then your changes in `demo__SSODashboardActivityStyle` will be reflected in the dashboard.
+If successfully configured, your changes in `demo__SSODashboardActivityStyle` will be reflected in the dashboard.
