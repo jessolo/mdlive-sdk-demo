@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "556621845098",
+    "firebase_url": "https://white-label-da937.firebaseio.com",
+    "project_id": "white-label-da937",
+    "storage_bucket": "white-label-da937.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556621845098:android:7e9775a819b14340",
+        "android_client_info": {
+          "package_name": "com.mdlive.whitelabel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556621845098-sih74cavpptkveo6ds49tt5f4iq9i7q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoUGikAPNcwlK5nxInwW-_DyilNjfQp18"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556621845098:android:027b26f429578995",
+        "android_client_info": {
+          "package_name": "com.mdlive.demosdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556621845098-sih74cavpptkveo6ds49tt5f4iq9i7q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoUGikAPNcwlK5nxInwW-_DyilNjfQp18"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

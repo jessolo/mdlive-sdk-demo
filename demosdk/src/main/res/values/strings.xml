@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Demo SDK</string>
+    <string name="start_the_sdk">Start MDLive SDK</string>
+</resources>

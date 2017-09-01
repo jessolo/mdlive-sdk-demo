@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="demo__SSODashboardActivityStyle" parent="rodeo__SSODashboardActivityStyle">
+        <!-- mdl__sso_dashboard_title_icon has higher priority than mdl__sso_dashboard_title_text, this must be a drawable resource -->
+        <item name="mdl__sso_dashboard_title_icon">@drawable/mdlive_logo_small</item>
+        <!-- Text to use as title, this must be a string resource -->
+        <item name="mdl__sso_dashboard_title_text">@string/mdl__app_name</item>
+
+        <!-- Layout to be used as header, if we change this layout the next header styles will be ignored -->
+        <item name="mdl__sso_dashboard_header_layout">@layout/mdl__sso_dashboard_header</item>
+        <!-- Color to use as header background -->
+        <item name="mdl__sso_dashboard_header_background_color">@color/fwf__near_white</item>
+        <!-- Text to use as header, this must be a string resource -->
+        <item name="mdl__sso_dashboard_header_text">@string/mdl__sso_dashboard_subtitle_text</item>
+        <!-- Text appearance for the header text, this must be a style resource -->
+        <item name="mdl__sso_dashboard_header_text_appearance">
+            @style/Base.TextAppearance.AppCompat.Title
+        </item>
+
+        <!-- Layout to be used as footer, if we change this layout the next footer styles will be ignored -->
+        <item name="mdl__sso_dashboard_footer_layout">@layout/mdl__sso_dashboard_footer</item>
+        <!-- Color to use as footer background -->
+        <item name="mdl__sso_dashboard_footer_background_color">@color/fwf__near_white</item>
+        <!-- Text to use as footer, this must be a string resource -->
+        <item name="mdl__sso_dashboard_footer_text">@string/mdl__sso_dashboard_footer_text</item>
+        <!-- Text appearance for the footer text, this must be a style resource -->
+        <item name="mdl__sso_dashboard_footer_text_appearance">
+            @style/Base.TextAppearance.AppCompat.Medium
+        </item>
+    </style>
+
+</resources>
