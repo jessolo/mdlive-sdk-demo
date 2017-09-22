@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Demo SDK</string>
     <string name="start_the_sdk">Start MDLive SDK</string>
+    <string name="cigna_welcome">Welcome to Cigna MDLive!</string>
+    <string name="dashboard_footer">Cigna Dashboard Footer Text</string>
+
 </resources>

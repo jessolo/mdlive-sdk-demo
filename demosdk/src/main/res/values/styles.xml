@@ -8,6 +8,53 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Cigna_HomeActivityStyle" parent="rodeo__HomeActivityStyle">
+        <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
+        <item name="rodeo__title_bar_text_color">@android:color/holo_blue_dark</item>
+        <item name="fwf__fab_widget_background_tint">@color/w3c__green</item>
+        <item name="fwf__fab_widget_src">@drawable/next_arrow</item>
+        <!--<item name="fwf__menu_button_text">@android:color/white</item>-->
+    </style>
+
+    <style name="ActivityStyle" parent="rodeo__ActivityStyle">
+        <item name="fwf__card_view_background_color">@android:color/white</item>
+        <item name="fwf__fab_widget_background_tint">@android:color/white</item>
+        <item name="rodeo__activity_title_text_color">@android:color/holo_blue_dark</item>
+    </style>
+
+    <style name="MedicalHistoryStyle" parent="rodeo__ActivityStyle">
+        <item name="fwf__card_view_background_color">@android:color/white</item>
+        <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
+        <item name="fwf__fab_widget_background_tint">@android:color/white</item>
+        <item name="rodeo__activity_title_text_color">@android:color/white</item>
+    </style>
+
+    <style name="fwf__FabNextWidgetStyle" parent="fwf__FabOkWidgetStyle">
+        <item name="fwf__fab_widget_src">@drawable/next_arrow</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/w3c__green</item>
+    </style>
+
+    <style name="fwf__FabAddWidgetStyle" parent="fwf__FabOkWidgetStyle">
+        <item name="fwf__fab_widget_src">@drawable/add_icon</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/w3c__yellow</item>
+    </style>
+    <style name="fwf__FabSearchWidgetStyle" parent="fwf__FabOkWidgetStyle">
+        <item name="fwf__fab_widget_src">@drawable/looking_glass</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/mdl__white</item>
+    </style>
+    <style name="fwf__EditTextStyle" parent="fwf__DefaultWidgetStyle">
+        <item name="colorControlNormal">@color/fwf__has_focus</item>
+        <item name="colorControlActivated">@color/fwf__has_focus</item>
+        <item name="colorControlHighlight">@color/mdl__white</item>
+        <item name="android:textColor">@color/mdl__black</item>
+    </style>
+    <style name="rodeo__PageSmallerInstructionsStyle" parent="rodeo__PageInstructionsStyle">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/mdl__white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="demo__SSODashboardActivityStyle" parent="rodeo__SSODashboardActivityStyle">
         <!-- mdl__sso_dashboard_title_icon has higher priority than mdl__sso_dashboard_title_text, this must be a drawable resource -->
         <item name="mdl__sso_dashboard_title_icon">@drawable/mdlive_logo_small</item>
@@ -37,4 +84,11 @@
         </item>
     </style>
 
+    <style name="demo__SSODashboardActivityStyle.yellow">
+        <!-- mdl__sso_dashboard_title_icon has higher priority than mdl__sso_dashboard_title_text, this must be a drawable resource -->
+        <item name="mdl__sso_dashboard_header_background_color">@android:color/holo_blue_dark</item>
+        <item name="mdl__sso_dashboard_footer_background_color">@android:color/white</item>
+        <item name="mdl__sso_dashboard_header_text">@string/cigna_welcome</item>
+        <item name="mdl__sso_dashboard_footer_text">@string/dashboard_footer</item>
+    </style>
 </resources>

@@ -15,7 +15,7 @@ public class DemoApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         MdlConfiguration configuration = new MdlConfiguration();
-        configuration.addAnalyticsEngine(new ConsoleAnalyticsEngine());
+        configuration.addAnalyticsEngine(new CignaAnalyticsEngine());
         configuration.getApplicationConstantsBuilder()
                 .debug(BuildConfig.DEBUG)
                 .isSessionTimeoutEnabled(false)

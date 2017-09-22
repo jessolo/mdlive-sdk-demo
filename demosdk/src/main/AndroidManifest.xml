@@ -19,10 +19,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.mdlive.mdlcore.activity.home.MdlHomeActivity"
+            android:theme="@style/Cigna_HomeActivityStyle"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.mdlive.mdlcore.activity.findprovider.MdlFindProviderActivity"
+            android:theme="@style/ActivityStyle"
+            tools:replace="android:theme" />
 
         <activity
             android:name="com.mdlive.mdlcore.activity.ssodashboard.MdlSSODashboardActivity"
-            android:theme="@style/demo__SSODashboardActivityStyle"
+            android:theme="@style/demo__SSODashboardActivityStyle.yellow"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.mdlive.mdlcore.activity.medicalhistory.MdlMedicalHistoryActivity"
+            android:theme="@style/MedicalHistoryStyle"
             tools:replace="android:theme" />
 
         <provider

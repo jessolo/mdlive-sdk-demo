@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="cigna_blue">#0069aa</color>
+    <color name="cigna_blue2">#2999cb</color>
+    <color name="fwf__menu_button_text">@color/w3c__green</color>
+    <color name="fwf__near_black">@color/mdl__black</color>
 </resources>
