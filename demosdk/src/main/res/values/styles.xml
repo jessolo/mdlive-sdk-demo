@@ -11,32 +11,43 @@
     <style name="Cigna_HomeActivityStyle" parent="rodeo__HomeActivityStyle">
         <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
         <item name="rodeo__title_bar_text_color">@android:color/holo_blue_dark</item>
-        <item name="fwf__fab_widget_background_tint">@color/w3c__green</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__white</item>
         <item name="fwf__fab_widget_src">@drawable/next_arrow</item>
         <!--<item name="fwf__menu_button_text">@android:color/white</item>-->
     </style>
 
     <style name="ActivityStyle" parent="rodeo__ActivityStyle">
-        <item name="fwf__card_view_background_color">@android:color/white</item>
-        <item name="fwf__fab_widget_background_tint">@android:color/white</item>
+        <item name="fwf__card_view_background_color">@color/mdl__white</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__white</item>
         <item name="rodeo__activity_title_text_color">@android:color/holo_blue_dark</item>
+        <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
+        <!--<item name="rodeo__page_background_primary">@color/mdl__red</item>-->
     </style>
 
     <style name="MedicalHistoryStyle" parent="rodeo__ActivityStyle">
-        <item name="fwf__card_view_background_color">@android:color/white</item>
+        <item name="fwf__card_view_background_color">@color/fwf__hint_of_blue</item>
         <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
-        <item name="fwf__fab_widget_background_tint">@android:color/white</item>
-        <item name="rodeo__activity_title_text_color">@android:color/white</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__white</item>
+        <item name="rodeo__activity_body_background_color">@color/cigna_blue</item>
+        <item name="fwf__default_button_background_color">@color/mdl__red</item>
+    </style>
+
+    <style name="MedicationsStyle" parent="rodeo__DialogActivityStyle">
+        <item name="fwf__card_view_background_color">@color/fwf__hint_of_blue</item>
+        <item name="rodeo__menu_background">@android:color/holo_blue_dark</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__white</item>
+        <item name="rodeo__activity_body_background_color">@color/cigna_blue</item>
+        <item name="fwf__default_button_background_color">@color/mdl__red</item>
     </style>
 
     <style name="fwf__FabNextWidgetStyle" parent="fwf__FabOkWidgetStyle">
         <item name="fwf__fab_widget_src">@drawable/next_arrow</item>
-        <item name="fwf__fab_widget_alternative_tint">@color/w3c__green</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/mdl__red</item>
     </style>
 
     <style name="fwf__FabAddWidgetStyle" parent="fwf__FabOkWidgetStyle">
         <item name="fwf__fab_widget_src">@drawable/add_icon</item>
-        <item name="fwf__fab_widget_alternative_tint">@color/w3c__yellow</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/mdl__white</item>
     </style>
     <style name="fwf__FabSearchWidgetStyle" parent="fwf__FabOkWidgetStyle">
         <item name="fwf__fab_widget_src">@drawable/looking_glass</item>
@@ -54,6 +65,9 @@
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:textColor">@color/mdl__white</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="demo__rodeo__ActivityStyle" parent="rodeo__ActivityStyle">
+        <item name="rodeo__title_bar_text_color">@color/w3c__yellow</item>
     </style>
     <style name="demo__SSODashboardActivityStyle" parent="rodeo__SSODashboardActivityStyle">
         <!-- mdl__sso_dashboard_title_icon has higher priority than mdl__sso_dashboard_title_text, this must be a drawable resource -->
@@ -90,5 +104,824 @@
         <item name="mdl__sso_dashboard_footer_background_color">@android:color/white</item>
         <item name="mdl__sso_dashboard_header_text">@string/cigna_welcome</item>
         <item name="mdl__sso_dashboard_footer_text">@string/dashboard_footer</item>
+        <item name="fwf__card_view_background_color">@color/fwf__hint_of_blue</item>
+    </style>
+
+    <style name="rodeo__ActivityStyle" parent="@style/Theme.AppCompat.Light">
+
+        <item name="rodeo__widget_margin_end">@dimen/rodeo__widget_margin_end</item>
+        <item name="rodeo__widget_margin_start">@dimen/rodeo__widget_margin_start</item>
+        <item name="rodeo__widget_margin_top">@dimen/rodeo__widget_margin_top</item>
+        <item name="mdl__email_address_widget_description_text">
+            @string/email_address_required_for_sign_in
+        </item>
+        <item name="mdl__email_widget_description_text">@string/username_required_for_sign_in</item>
+        <item name="mdl__still_taking_medication_text">@string/still_taking_medication</item>
+        <item name="mdl__input_not_required_description_text">@string/input_not_required</item>
+        <item name="fwf__credit_card_logo_description_text">@string/fwf__credit_card_description
+        </item>
+
+        <item name="rodeo__activity_title_text_color">@color/rodeo__activity_title_text_color</item>
+        <item name="rodeo__activity_title_text_size">@dimen/rodeo__activity_title_text_size</item>
+        <item name="android:textColorPrimary">@color/fwf__near_black</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:editTextStyle">@style/RobotoEditTextStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+
+        <!-- Default Resource Assignments -->
+        <item name="rodeo__company_logo">@drawable/mdl__company_logo</item>
+        <item name="rodeo__company_logo_frame_background_color">
+            @color/rodeo__company_logo_background
+        </item>
+        <item name="rodeo__app_name">@string/mdl__app_name</item>
+
+        <item name="rodeo__company_tag_line_text_color">@color/tag_line__text</item>
+
+        <item name="mdl__caduceus_image">@drawable/caduceus_large</item>
+
+        <item name="fwf__pin_keypad_text_color">@color/mdl__white</item>
+        <item name="fwf__pin_keypad_background_drawable">@drawable/keypad_selector</item>
+        <item name="mdl__label_state">@string/label_state</item>
+
+        <!-- Color Resources -->
+        <item name="rodeo__title_bar_top_border_color_1">@color/x11__White</item>
+        <item name="rodeo__title_bar_top_border_color_2">@color/x11__Gray</item>
+        <item name="rodeo__title_bar_background_color">@color/rodeo__activity_title_background
+        </item>
+        <item name="rodeo__title_bar_text_color">@color/fwf__near_black</item>
+        <item name="rodeo__activity_body_background_color">@color/login_activity__background</item>
+        <item name="fwf__default_button_background_color">
+            @color/fwf__feature_button_background_normal
+        </item>
+        <item name="fwf__default_button_text_color">@color/fwf__feature_button_text_color</item>
+        <item name="fwf__text_view_default_text_color">@color/fwf__text_view_text_color</item>
+        <item name="fwf__forgot_credentials_text_color">@color/mdl__blue</item>
+
+        <item name="fwf__text_view_text_color">@color/fwf__text_view_text_color</item>
+        <item name="fwf__widget_type_heading_text_color">
+            @color/fwf__widget_type_heading_text_color
+        </item>
+        <item name="fwf__card_view_background_color">@color/fwf__card_view_background_color</item>
+        <item name="fwf__card_view_toolbar_text_color">@color/fwf__card_view_toolbar_text_color
+        </item>
+        <item name="fwf__hint_text_color">@color/fwf__hint_text</item>
+        <item name="fwf__focus_view_color">@color/fwf__user_interaction</item>
+
+        <item name="fwf__family_member_card_view_background_color">
+            @color/fwf__card_view_background_color
+        </item>
+        <item name="fwf__family_member_full_name_text_color">@color/fwf__strong_gray</item>
+        <item name="fwf__family_member_username_text_color">@color/fwf__near_black</item>
+        <item name="fwf__family_member_account_type_text_color">@color/fwf__strong_gray</item>
+        <item name="fwf__swipable_page_background_color">@color/fwf__hint_of_gray</item>
+        <item name="rodeo__pager_tab_strip_background">@color/rodeo__pager_tab_strip_background
+        </item>
+
+        <!--Integer Resources-->
+        <item name="fwf__activity_transition_duration">@integer/fwf__activity_transition_duration
+        </item>
+
+        <!-- Dimension Resources -->
+        <item name="mdl__default_padding_bottom">8dp</item>
+        <item name="mdl__default_padding_top">8dp</item>
+        <item name="mdl__default_padding_start">16dp</item>
+        <item name="mdl__default_padding_end">16dp</item>
+        <item name="mdl__default_margin_bottom">8dp</item>
+        <item name="mdl__default_margin_top">8dp</item>
+        <item name="mdl__default_margin_start">16dp</item>
+        <item name="mdl__default_margin_end">16dp</item>
+        <item name="mdl__material_design__screen_edge_margin">
+            @dimen/material_design__screen_edge_margin
+        </item>
+        <item name="mdl__animations_demo_margin_side">@dimen/animation_demo_margin_side</item>
+        <item name="mdl__animations_demo_margin_between">@dimen/animation_demo_margin_between</item>
+        <item name="fwf__credit_card_display_widget_margin_end">30dp</item>
+        <item name="fwf__credit_card_display_widget_margin_start">12dp</item>
+        <item name="mdl__api_environment_text_view_current_environment_url_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_current_environment_url_margin_top">4dp</item>
+        <item name="mdl__api_environment_default_padding">16dp</item>
+        <item name="mdl__api_environment_spinner_width">@dimen/environment_spinner_width</item>
+        <item name="mdl__api_environment_text_view_environment_url_label_margin_top">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_url_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_key_label_margin_top">8dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_key_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_secret_label_margin_top">8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_api_secret_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_test_email_label_margin_start">8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_test_email_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_test_password_label_margin_start">
+            8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_test_password_margin_start">16dp
+        </item>
+        <item name="mdl__pin_change_wizard_steps__margin__bottom">
+            @dimen/pin_change_wizard_steps__margin__bottom
+        </item>
+        <item name="mdl__pin_change_wizard_steps__margin__top">
+            @dimen/pin_change_wizard_steps__margin__top
+        </item>
+        <item name="mdl__pin_change_activity__logo__layout_height">
+            @dimen/pin_change_activity__logo__layout_height
+        </item>
+        <item name="rodeo__company_logo_frame_width">@dimen/company_logo_frame_match_parent</item>
+        <item name="rodeo__company_logo_frame_height">@dimen/company_logo_frame_wrap_content</item>
+        <item name="mdl__signin_activity_margin_top">
+            @dimen/signin_activity__widget__half_margin__top
+        </item>
+        <item name="mdl__left_zone_view_width">@dimen/left_zone_view_width</item>
+        <item name="mdl__left_zone_view_height">@dimen/left_zone_view_height</item>
+        <item name="rodeo__company_logo_container_width">@dimen/company_logo_container_width</item>
+        <item name="rodeo__company_logo_container_height">@dimen/company_logo_container_height
+        </item>
+        <item name="rodeo__company_logo_width">@dimen/company_logo_width</item>
+        <item name="rodeo__company_logo_height">@dimen/company_logo_height</item>
+        <item name="rodeo__company_tag_line_width">@dimen/company_tag_line_width</item>
+        <item name="rodeo__company_tag_line_height">@dimen/company_tag_line_height</item>
+        <item name="rodeo__company_tag_line_text_size">@dimen/company_tag_line_text_size</item>
+        <item name="mdl__right_zone_view_width">@dimen/right_zone_view_width</item>
+        <item name="mdl__right_zone_view_height">@dimen/right_zone_view_height</item>
+        <item name="mdl__title_bar_top_border_height">@dimen/activity_title__accent__height</item>
+        <item name="mdl__title_bar_top_border_margin_top">@dimen/activity_title__margin_top</item>
+        <item name="mdl__title_bar_text_padding">@dimen/activity_title__text_padding__left</item>
+        <item name="mdl__title_bar_text_size">@dimen/activity_title__text_size</item>
+        <item name="mdl__checkbox_widget_margin_start">
+            @dimen/signin_activity__checkbox__margin_start
+        </item>
+        <item name="mdl__default_button_width">
+            @dimen/signin_activity_create_new_account_button_width
+        </item>
+        <item name="mdl__default_button_height">
+            @dimen/signin_activity_create_new_account_button_height
+        </item>
+        <item name="mdl__default_button_margin_top">
+            @dimen/signin_activity__create_new_account__margin_top
+        </item>
+        <item name="mdl__default_button_margin_start">
+            @dimen/signin_activity__create_new_account__margin_start
+        </item>
+        <item name="mdl__default_button_margin_end">
+            @dimen/signin_activity__create_new_account__margin_end
+        </item>
+        <item name="mdl__caduceus_large_image_width">@dimen/caduceus_image_width</item>
+        <item name="mdl__caduceus_large_image_height">@dimen/caduceus_image_height</item>
+        <item name="mdl__caduceus_large_image_margin_top">@dimen/sign_in__margin_top_logo</item>
+        <item name="fwf__default_margin_start">@dimen/fwf__default_margin_start</item>
+        <item name="fwf__default_margin_end">@dimen/fwf__default_margin_end</item>
+        <item name="fwf__default_margin_top">@dimen/fwf__default_margin_top</item>
+        <item name="fwf__default_margin_bottom">@dimen/fwf__default_margin_bottom</item>
+        <item name="fwf__credit_card_logo_image_width">@dimen/fwf__credit_card_logo_image_width
+        </item>
+        <item name="fwf__credit_card_logo_image_height">@dimen/fwf__credit_card_logo_image_height
+        </item>
+        <item name="fwf__checkbox_margin_bottom">@dimen/fwf__checkbox_margin_bottom</item>
+        <item name="fwf__spinner_item_height_one_line">@dimen/fwf__spinner_item_height_one_line
+        </item>
+        <item name="fwf__spinner_item_height_two_lines">@dimen/fwf__spinner_item_height_two_lines
+        </item>
+
+        <item name="mdl__account_settings_label_margin_top">
+            @dimen/account_settings_label_margin_top
+        </item>
+        <item name="mdl__account_settings_label_margin_bottom">
+            @dimen/account_settings_label_margin_bottom
+        </item>
+        <item name="mdl__account_settings_button_default_margin_end">
+            @dimen/account_settings_button_default_margin_end
+        </item>
+        <item name="mdl__account_settings_button_default_margin_top">
+            @dimen/account_settings_button_default_margin_top
+        </item>
+        <item name="mdl__account_settings_button_default_padding_end">
+            @dimen/account_settings_button_default_padding_end
+        </item>
+        <item name="mdl__account_settings_button_default_padding_start">
+            @dimen/account_settings_button_default_padding_start
+        </item>
+
+        <!-- String Resources -->
+        <item name="rodeo__password_widget_description_text">@string/password_must_comply</item>
+        <item name="rodeo__company_tag_line_text">@string/mdl__company_tag_line_text</item>
+        <item name="mdl__title_bar_text">@string/sign_in</item>
+        <item name="mdl__default_button_text">@string/create_new_account</item>
+        <item name="mdl__account_settings_label_text">
+            @string/mdl__account_settings_label_text
+        </item>
+        <item name="mdl__account_settings_change_password_text">
+            @string/mdl__account_settings_change_password_text
+        </item>
+        <item name="mdl__account_preferences_about_mdlive_text">
+            @string/mdl__account_preferences_about_text
+        </item>
+        <item name="mdl__account_settings_change_pin_text">
+            @string/mdl__account_settings_change_pin_text
+        </item>
+        <item name="mdl__account_settings_change_security_questions_text">
+            @string/mdl__account_settings_change_security_questions_text
+        </item>
+        <item name="mdl__account_settings_preferred_login_label_text">
+            @string/mdl__account_settings_preferred_login_label_text
+        </item>
+
+        <!-- Widget Resources -->
+        <item name="fwf__label_text_color">@color/rodeo__accent_color_3</item>
+        <item name="fwf__videocam_icon_accent_2">@drawable/fwf__videocam_icon_accent_2</item>
+        <item name="fwf__call_icon_accent_2">@drawable/fwf__call_icon_accent_2</item>
+
+        <item name="fwf__widget_margin_top">@dimen/fwf__widget_margin_top</item>
+        <item name="fwf__phone_widget_label_text">@string/fwf__phone_number</item>
+        <item name="fwf__button_size">@dimen/fwf__button_size</item>
+        <item name="fwf__quality_indicator_margin_bottom">
+            @dimen/fwf__quality_indicator_margin_bottom
+        </item>
+        <item name="fwf__embedded_text_margin_bottom">2dp</item>
+        <item name="fwf__edit_text_3_width">@dimen/fwf__edit_text_3_width</item>
+        <item name="fwf__indicator_3_width">@dimen/fwf__indicator_3_width</item>
+        <item name="fwf__edit_text_4_width">@dimen/fwf__edit_text_4_width</item>
+        <item name="fwf__indicator_4_width">@dimen/fwf__indicator_4_width</item>
+        <item name="fwf__edit_text_margin_bottom">@dimen/fwf__edit_text_margin_bottom</item>
+        <item name="fwf__focus_indicator_margin_bottom">@dimen/fwf__focus_indicator_margin_bottom
+        </item>
+        <item name="fwf__focus_indicator_color">@color/fwf__user_interaction</item>
+        <item name="fwf__text_hint_color">@color/fwf__hint_text</item>
+        <item name="fwf__date_widget_size">140dp</item>
+        <item name="fwf__calendar_icon">@drawable/calendar_grey</item>
+        <item name="fwf__date_label_text">@string/fwf__date_label_text</item>
+        <item name="fwf__default_spinner_item_padding_end">@dimen/fwf__spinner_item_padding_end
+        </item>
+        <item name="fwf__default_spinner_item_padding_start">
+            @dimen/fwf__spinner_item_padding_start
+        </item>
+        <item name="fwf__default_spinner_item_padding_top">@dimen/fwf__spinner_item_padding_top
+        </item>
+        <item name="fwf__account_settings_spinner_height">
+            @dimen/fwf__account_settings_spinner_height
+        </item>
+        <item name="fwf_account_settings_spinner_label_margin_top">
+            @dimen/fwf__account_settings_spinner_label_margin_top
+        </item>
+        <item name="fwf_account_settings_spinner_label_margin_bottom">
+            @dimen/fwf__account_settings_spinner_label_margin_bottom
+        </item>
+        <item name="fwf__account_settings_spinner_label_padding_end">
+            @dimen/fwf__account_settings_spinner_label_padding_end
+        </item>
+        <item name="fwf__account_settings_spinner_label_padding_start">
+            @dimen/fwf__account_settings_spinner_label_padding_start
+        </item>
+        <item name="fwf__default_text_size">@dimen/fwf__default_text_size</item>
+        <item name="fwf__account_settings_spinner_label_text_color">
+            @color/fwf__account_settings_spinner_label_text_color
+        </item>
+        <item name="fwf__account_settings_spinner_background_tint_color">
+            @color/fwf__account_settings_spinner_background_tint_color
+        </item>
+
+        <!-- debug menu -->
+        <item name="rodeo__debug_menu_header_text_color">@color/x11__Blue</item>
+        <item name="mdl__debug_menu__header_label_margin">@dimen/debug_menu__header_label_margin
+        </item>
+        <item name="mdl__debug_menu__header_padding">@dimen/debug_menu__header_padding
+        </item>
+        <item name="mdl__debug_menu__header_margin_left">@dimen/debug_menu__header_margin_left
+        </item>
+        <item name="mdl__debug_menu__version_name">@string/version_name</item>
+        <item name="mdl__debug_menu__jenkins_job_name">@string/jenkins_job_name</item>
+        <item name="mdl__debug_menu__jenkins_build_number">@string/jenkins_build_number</item>
+        <item name="mdl__debug_menu__git_head_hash">@string/git_head_hash</item>
+        <item name="fwf__address_text_size">24sp</item>
+        <item name="fwf__address_background_color">@color/x11__LightGrey</item>
+        <item name="fwf__editable_icon">@drawable/pencil_white</item>
+        <item name="fwf__data_reset_image">@drawable/fwf__data_reset</item>
+        <item name="fwf__address1_text">@string/fwf__address1_text</item>
+        <item name="fwf__address2_text">@string/fwf__address2_text</item>
+        <item name="fwf__city_text">@string/fwf__city_text</item>
+        <item name="fwf__zipcode_text">@string/fwf__zipcode_text</item>
+        <item name="fwf__calendar_icon_image_src">@drawable/calendar_grey</item>
+
+        <!-- Drawable Resources -->
+        <item name="fwf__data_quality_image_src">@drawable/fwf__data_quality_icon</item>
+        <item name="fwf__data_info_image_src">@drawable/fwf__data_ok</item>
+        <item name="fwf__data_reset_image_src">@drawable/fwf__data_reset</item>
+        <item name="fwf__pin_keypad_image_src">@drawable/ic_backspace_24dp</item>
+        <item name="fwf__chevron_right_image_src">@drawable/ic_chevron_right</item>
+        <item name="fwf__spinner_outline_image_src">@drawable/fwf__spinner_outline</item>
+        <item name="fwf__fwf__spinner_indicator_image_src">
+            @drawable/fwf__spinner_indicator_drawable
+        </item>
+        <item name="fwf__spinner_indicator_image_src">@drawable/fwf__spinner_indicator_drawable
+        </item>
+        <item name="fwf__card_view_collapse_image_src">@drawable/fwf__card_view_collapse</item>
+        <item name="fwf__checkbox_button_image_src">@drawable/fwf__checkbox_button</item>
+        <item name="fwf__background__menu_item_counter_image_src">
+            @drawable/background__menu_item_counter
+        </item>
+
+        <!-- Widgets Styles -->
+        <item name="fwf__default_widget_style">@style/fwf__DefaultWidgetStyle</item>
+        <item name="fwf__fab_widget_style">@style/fwf__FabOkWidgetStyle</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__caribbean_shoreline_green</item>
+        <item name="fwf__fab_widget_src">@drawable/check_mark__white</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/fwf__fab_background_warning</item>
+        <item name="fwf__fab_widget_alternative_src">
+            @drawable/fwf__data_quality_exception_character
+        </item>
+        <item name="fwf__fab_widget_ripple_color">@color/mdl__fab_ripple_color</item>
+        <item name="fwf__date_widget_style">@style/fwf__DateWidgetStyle</item>
+        <item name="fwf__card_view_style">@style/fwf__CardViewStyle</item>
+        <item name="fwf__message_card_view_style">@style/fwf__MessageCardViewStyle</item>
+        <item name="fwf__family_member_card_view_style">@style/mdl__FamilyMemberCardViewStyle</item>
+        <item name="fwf__pharmacy_card_view_style">@style/mdl__MedicationCardViewStyle</item>
+        <item name="fwf__medication_card_view_style">@style/mdl__MedicationCardViewStyle</item>
+        <item name="fwf__procedures_card_view_style">@style/mdl__ProcedureCardViewStyle</item>
+        <item name="mdl__message_list_summary_card_view_style">
+            @style/mdl__MessageListSummaryCardViewStyle
+        </item>
+        <item name="fwf__checkbox_style">@style/fwf__CheckboxStyle</item>
+        <item name="fwf__spinner_item_style">@style/fwf__SpinnerStyle</item>
+
+        <item name="fwf__menu_button_style">@style/fwf__ButtonMenuStyle</item>
+        <item name="fwf__choice_button_style__ref">@style/fwf__ButtonChoiceStyle</item>
+
+        <item name="fwf__feature_button_style">@style/fwf__ButtonFeatureStyle</item>
+        <item name="fwf__feature_button_background">@drawable/fwf__feature_button_background</item>
+        <item name="fwf__feature_button_background_selected">
+            @drawable/fwf__button_focus_background
+        </item>
+        <item name="fwf__feature_button_background_pressed">
+            @color/fwf__feature_button_background_pressed
+        </item>
+        <item name="fwf__feature_button_background_normal">
+            @color/fwf__feature_button_background_normal
+        </item>
+        <item name="fwf__feature_button_height">@dimen/fwf__feature_button_height</item>
+        <item name="fwf__feature_button_padding">@dimen/fwf__feature_button_padding</item>
+        <item name="fwf__feature_button_text_size">@dimen/fwf__feature_button_text_size</item>
+        <item name="fwf__feature_button_text_color">@color/fwf__feature_button_text_color</item>
+
+        <item name="fwf__feature_button_wide_style">@style/fwf__ButtonFeatureWideStyle</item>
+
+        <item name="mdl__my_account_change_profile_picture_dialog_text_view_style">
+            @style/libCore__my_account_change_profile_picture_dialog_text_view_style
+        </item>
+        <item name="mdl__my_account_change_profile_picture_dialog_clickeable_bg_image_src">
+            @drawable/select_profile_picture_bg
+        </item>
+        <item name="fwf__user_profile_picture_size">@dimen/fwf__user_profile_picture_size</item>
+
+        <!-- Page styles -->
+        <item name="rodeo__page_instructions_text_color">@color/rodeo__accent_color_3</item>
+        <item name="rodeo__menu_background">@color/rodeo__menu_background</item>
+        <item name="rodeo__page_background_primary">@color/rodeo__page_background_primary</item>
+        <item name="rodeo__page_background_primary_padding">
+            @dimen/rodeo__page_background_primary_padding
+        </item>
+
+        <item name="rodeo__page_background_secondary">@color/rodeo__page_background_secondary</item>
+        <item name="rodeo__page_background_sea_blue">@color/rodeo__page_background_sea_blue</item>
+        <item name="rodeo__page_background_secondary_padding_start">
+            @dimen/rodeo__page_background_secondary_padding_start
+        </item>
+        <item name="rodeo__page_background_secondary_padding_end">
+            @dimen/rodeo__page_background_secondary_padding_end
+        </item>
+        <item name="rodeo__page_background_secondary_padding_top">
+            @dimen/rodeo__page_background_secondary_padding_top
+        </item>
+        <item name="rodeo__page_background_secondary_padding_bottom">
+            @dimen/rodeo__page_background_secondary_padding_bottom
+        </item>
+
+        <item name="fwf__scroll_bar_style">@style/fwf__ScrollBarStyle</item>
+        <item name="fwf__scroll_view_style">@style/fwf__ScrollViewStyle</item>
+
+        <item name="rodeo__page_instructions_style">@style/rodeo__PageInstructionsStyle</item>
+        <item name="rodeo__page_smaller_instructions_style">
+            @style/rodeo__PageSmallerInstructionsStyle
+        </item>
+        <item name="rodeo__page_instructions_bold_style">@style/rodeo__PageInstructionsBoldStyle
+        </item>
+        <item name="rodeo__page_title_style">@style/rodeo__PageTitleStyle</item>
+        <item name="rodeo__menu_layout_style">@style/rodeo__MenuLayoutStyle</item>
+        <item name="rodeo__accent_layout_style">@style/rodeo__AccentLayoutStyle</item>
+        <item name="rodeo__page_layout_style_primary">@style/rodeo__PageLayoutStylePrimary</item>
+        <item name="rodeo__page_layout_style_primary_sea_blue">
+            @style/rodeo__PageLayoutStylePrimarySeaBlue
+        </item>
+        <item name="rodeo__page_layout_style_secondary">@style/rodeo__PageLayoutStyleSecondary
+        </item>
+        <item name="rodeo__page_layout_style_secondary_sea_blue">
+            @style/rodeo__PageLayoutStyleSecondarySeaBlue
+        </item>
+        <item name="rodeo__activity_layout_style_primary">@style/rodeo__ActivityLayoutStylePrimary
+        </item>
+        <item name="rodeo__activity_layout_style_secondary">
+            @style/rodeo__ActivityLayoutStyleSecondary
+        </item>
+        <item name="rodeo__activity_layout_style_sea_blue">
+            @style/rodeo__ActivityLayoutStyleSeaBlue
+        </item>
+        <item name="rodeo__button_dialog_cancel_style">@style/fwf__ButtonDialogCancelStyle</item>
+        <item name="rodeo__navigation_drawer_style">@style/rodeo__NavigationDrawerStyle</item>
+        <item name="rodeo__borderless_button_style">@style/rodeo__BorderlessButtonStyle</item>
+
+
+        <item name="android:titleTextStyle">@style/rodeo__ActivityTitleTextStyle</item>
+        <item name="colorPrimary">@color/fwf__near_white</item>
+        <item name="android:actionBarStyle">@style/rodeo__ActionBarStyle</item>
+    </style>
+
+    <style name="rodeo__DialogActivityStyle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+
+        <!--=================================================-->
+        <item name="android:textColorPrimary">@color/fwf__near_black</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:editTextStyle">@style/RobotoEditTextStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:actionBarStyle">@style/rodeo__ActionBarStyle</item>
+        <item name="android:actionBarSize">50dp</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="android:actionButtonStyle">@style/rodeo__ButtonActionStyle</item>
+
+        <!-- Default Resource Assignments -->
+        <item name="rodeo__company_logo">@drawable/mdl__company_logo</item>
+        <item name="rodeo__company_logo_frame_background_color">
+            @color/rodeo__company_logo_background
+        </item>
+
+        <item name="rodeo__company_tag_line_text_color">@color/tag_line__text</item>
+
+        <item name="mdl__caduceus_image">@drawable/caduceus_large</item>
+
+        <item name="fwf__pin_keypad_text_color">@color/mdl__white</item>
+        <item name="fwf__pin_keypad_background_drawable">
+            @drawable/keypad_selector
+        </item>
+        <item name="mdl__label_state">@string/label_state</item>
+
+        <!-- Color Resources -->
+        <item name="rodeo__title_bar_top_border_color_1">@color/x11__White</item>
+        <item name="rodeo__title_bar_top_border_color_2">@color/x11__Gray</item>
+        <item name="rodeo__title_bar_background_color">@color/rodeo__activity_title_background
+        </item>
+        <item name="rodeo__title_bar_text_color">@color/fwf__near_black</item>
+        <item name="rodeo__activity_body_background_color">@color/login_activity__background</item>
+
+        <item name="fwf__default_button_background_color">
+            @color/fwf__feature_button_background_normal
+        </item>
+        <item name="fwf__default_button_text_color">@color/fwf__feature_button_text_color</item>
+
+        <item name="fwf__text_view_default_text_color">@color/fwf__text_view_text_color</item>
+        <item name="fwf__forgot_credentials_text_color">@color/mdl__blue</item>
+
+        <item name="fwf__text_view_text_color">@color/fwf__text_view_text_color</item>
+        <item name="fwf__widget_type_heading_text_color">
+            @color/fwf__widget_type_heading_text_color
+        </item>
+        <item name="fwf__card_view_background_color">@color/fwf__card_view_background_color</item>
+        <item name="fwf__card_view_toolbar_text_color">@color/fwf__card_view_toolbar_text_color
+        </item>
+        <item name="fwf__hint_text_color">@color/fwf__hint_text</item>
+        <item name="fwf__focus_view_color">@color/fwf__user_interaction</item>
+
+        <item name="fwf__family_member_card_view_background_color">
+            @color/fwf__card_view_background_color
+        </item>
+        <item name="fwf__family_member_full_name_text_color">@color/fwf__strong_gray</item>
+        <item name="fwf__family_member_username_text_color">@color/fwf__near_black</item>
+        <item name="fwf__family_member_account_type_text_color">@color/fwf__strong_gray</item>
+        <item name="fwf__swipable_page_background_color">@color/fwf__hint_of_gray</item>
+        <item name="rodeo__pager_tab_strip_background">@color/rodeo__pager_tab_strip_background
+        </item>
+
+        <!--Integer Resources-->
+        <item name="fwf__activity_transition_duration">@integer/fwf__activity_transition_duration
+        </item>
+
+        <!-- Dimension Resources -->
+        <item name="mdl__default_padding_bottom">8dp</item>
+        <item name="mdl__default_padding_top">8dp</item>
+        <item name="mdl__default_padding_start">16dp</item>
+        <item name="mdl__default_padding_end">16dp</item>
+        <item name="mdl__default_margin_bottom">8dp</item>
+        <item name="mdl__default_margin_top">8dp</item>
+        <item name="mdl__default_margin_start">16dp</item>
+        <item name="mdl__default_margin_end">16dp</item>
+        <item name="mdl__material_design__screen_edge_margin">
+            @dimen/material_design__screen_edge_margin
+        </item>
+        <item name="mdl__animations_demo_margin_side">@dimen/animation_demo_margin_side</item>
+        <item name="mdl__animations_demo_margin_between">@dimen/animation_demo_margin_between</item>
+        <item name="fwf__credit_card_display_widget_margin_end">30dp</item>
+        <item name="fwf__credit_card_display_widget_margin_start">12dp</item>
+        <item name="mdl__api_environment_text_view_current_environment_url_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_current_environment_url_margin_top">4dp</item>
+        <item name="mdl__api_environment_default_padding">16dp</item>
+        <item name="mdl__api_environment_spinner_width">@dimen/environment_spinner_width</item>
+        <item name="mdl__api_environment_text_view_environment_url_label_margin_top">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_url_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_key_label_margin_top">8dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_key_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_api_secret_label_margin_top">8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_api_secret_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_test_email_label_margin_start">8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_test_email_margin_start">16dp</item>
+        <item name="mdl__api_environment_text_view_environment_test_password_label_margin_start">
+            8dp
+        </item>
+        <item name="mdl__api_environment_text_view_environment_test_password_margin_start">16dp
+        </item>
+        <item name="mdl__pin_change_wizard_steps__margin__bottom">
+            @dimen/pin_change_wizard_steps__margin__bottom
+        </item>
+        <item name="mdl__pin_change_wizard_steps__margin__top">
+            @dimen/pin_change_wizard_steps__margin__top
+        </item>
+        <item name="mdl__pin_change_activity__logo__layout_height">
+            @dimen/pin_change_activity__logo__layout_height
+        </item>
+        <item name="rodeo__company_logo_frame_width">@dimen/company_logo_frame_match_parent</item>
+        <item name="rodeo__company_logo_frame_height">@dimen/company_logo_frame_wrap_content</item>
+        <item name="mdl__signin_activity_margin_top">
+            @dimen/signin_activity__widget__half_margin__top
+        </item>
+        <item name="mdl__left_zone_view_width">@dimen/left_zone_view_width</item>
+        <item name="mdl__left_zone_view_height">@dimen/left_zone_view_height</item>
+        <item name="rodeo__company_logo_container_width">@dimen/company_logo_container_width</item>
+        <item name="rodeo__company_logo_container_height">@dimen/company_logo_container_height
+        </item>
+        <item name="rodeo__company_logo_width">@dimen/company_logo_width</item>
+        <item name="rodeo__company_logo_height">@dimen/company_logo_height</item>
+        <item name="rodeo__company_tag_line_width">@dimen/company_tag_line_width</item>
+        <item name="rodeo__company_tag_line_height">@dimen/company_tag_line_height</item>
+        <item name="rodeo__company_tag_line_text_size">@dimen/company_tag_line_text_size</item>
+        <item name="mdl__right_zone_view_width">@dimen/right_zone_view_width</item>
+        <item name="mdl__right_zone_view_height">@dimen/right_zone_view_height</item>
+        <item name="mdl__title_bar_top_border_height">@dimen/activity_title__accent__height</item>
+        <item name="mdl__title_bar_top_border_margin_top">@dimen/activity_title__margin_top</item>
+        <item name="mdl__title_bar_text_padding">@dimen/activity_title__text_padding__left</item>
+        <item name="mdl__title_bar_text_size">@dimen/activity_title__text_size</item>
+        <item name="mdl__checkbox_widget_margin_start">
+            @dimen/signin_activity__checkbox__margin_start
+        </item>
+        <item name="mdl__default_button_width">
+            @dimen/signin_activity_create_new_account_button_width
+        </item>
+        <item name="mdl__default_button_height">
+            @dimen/signin_activity_create_new_account_button_height
+        </item>
+        <item name="mdl__default_button_margin_top">
+            @dimen/signin_activity__create_new_account__margin_top
+        </item>
+        <item name="mdl__default_button_margin_start">
+            @dimen/signin_activity__create_new_account__margin_start
+        </item>
+        <item name="mdl__default_button_margin_end">
+            @dimen/signin_activity__create_new_account__margin_end
+        </item>
+        <item name="mdl__caduceus_large_image_width">@dimen/caduceus_image_width</item>
+        <item name="mdl__caduceus_large_image_height">@dimen/caduceus_image_height</item>
+        <item name="mdl__caduceus_large_image_margin_top">@dimen/sign_in__margin_top_logo</item>
+        <item name="fwf__default_margin_start">@dimen/fwf__default_margin_start</item>
+        <item name="fwf__default_margin_end">@dimen/fwf__default_margin_end</item>
+        <item name="fwf__default_margin_top">@dimen/fwf__default_margin_top</item>
+        <item name="fwf__default_margin_bottom">@dimen/fwf__default_margin_bottom</item>
+        <item name="fwf__credit_card_logo_image_width">@dimen/fwf__credit_card_logo_image_width
+        </item>
+        <item name="fwf__credit_card_logo_image_height">@dimen/fwf__credit_card_logo_image_height
+        </item>
+        <item name="fwf__checkbox_margin_bottom">@dimen/fwf__checkbox_margin_bottom</item>
+        <item name="fwf__spinner_item_height_one_line">@dimen/fwf__spinner_item_height_one_line
+        </item>
+        <item name="fwf__spinner_item_height_two_lines">@dimen/fwf__spinner_item_height_two_lines
+        </item>
+
+        <item name="mdl__account_settings_label_margin_top">
+            @dimen/account_settings_label_margin_top
+        </item>
+        <item name="mdl__account_settings_label_margin_bottom">
+            @dimen/account_settings_label_margin_bottom
+        </item>
+        <item name="mdl__account_settings_button_default_margin_end">
+            @dimen/account_settings_button_default_margin_end
+        </item>
+        <item name="mdl__account_settings_button_default_margin_top">
+            @dimen/account_settings_button_default_margin_top
+        </item>
+        <item name="mdl__account_settings_button_default_padding_end">
+            @dimen/account_settings_button_default_padding_end
+        </item>
+        <item name="mdl__account_settings_button_default_padding_start">
+            @dimen/account_settings_button_default_padding_start
+        </item>
+
+        <!-- String Resources -->
+        <item name="rodeo__company_tag_line_text">@string/mdl__company_tag_line_text</item>
+        <item name="mdl__title_bar_text">@string/sign_in</item>
+        <item name="mdl__default_button_text">@string/create_new_account</item>
+        <item name="mdl__account_settings_label_text">
+            @string/mdl__account_settings_label_text
+        </item>
+        <item name="mdl__account_settings_change_password_text">
+            @string/mdl__account_settings_change_password_text
+        </item>
+        <item name="mdl__account_settings_change_pin_text">
+            @string/mdl__account_settings_change_pin_text
+        </item>
+        <item name="mdl__account_settings_change_security_questions_text">
+            @string/mdl__account_settings_change_security_questions_text
+        </item>
+        <item name="mdl__account_settings_preferred_login_label_text">
+            @string/mdl__account_settings_preferred_login_label_text
+        </item>
+
+        <!-- Widget Resources -->
+        <item name="fwf__label_text_color">@color/rodeo__accent_color_3</item>
+        <item name="fwf__videocam_icon_accent_2">@drawable/fwf__videocam_icon_accent_2</item>
+        <item name="fwf__call_icon_accent_2">@drawable/fwf__call_icon_accent_2</item>
+
+        <item name="fwf__widget_margin_top">@dimen/fwf__widget_margin_top</item>
+        <item name="fwf__phone_widget_label_text">@string/fwf__phone_number</item>
+        <item name="fwf__button_size">@dimen/fwf__button_size</item>
+        <item name="fwf__quality_indicator_margin_bottom">
+            @dimen/fwf__quality_indicator_margin_bottom
+        </item>
+        <item name="fwf__embedded_text_margin_bottom">2dp</item>
+        <item name="fwf__edit_text_3_width">@dimen/fwf__edit_text_3_width</item>
+        <item name="fwf__indicator_3_width">@dimen/fwf__indicator_3_width</item>
+        <item name="fwf__edit_text_4_width">@dimen/fwf__edit_text_4_width</item>
+        <item name="fwf__indicator_4_width">@dimen/fwf__indicator_4_width</item>
+        <item name="fwf__edit_text_margin_bottom">@dimen/fwf__edit_text_margin_bottom</item>
+        <item name="fwf__focus_indicator_margin_bottom">@dimen/fwf__focus_indicator_margin_bottom
+        </item>
+        <item name="fwf__focus_indicator_color">@color/fwf__user_interaction</item>
+        <item name="fwf__text_hint_color">@color/fwf__hint_text</item>
+        <item name="fwf__date_widget_size">140dp</item>
+        <item name="fwf__calendar_icon">@drawable/calendar_grey</item>
+        <item name="fwf__date_label_text">@string/fwf__date_label_text</item>
+        <item name="fwf__default_spinner_item_padding_end">@dimen/fwf__spinner_item_padding_end
+        </item>
+        <item name="fwf__default_spinner_item_padding_start">
+            @dimen/fwf__spinner_item_padding_start
+        </item>
+        <item name="fwf__default_spinner_item_padding_top">@dimen/fwf__spinner_item_padding_top
+        </item>
+        <item name="fwf__account_settings_spinner_height">
+            @dimen/fwf__account_settings_spinner_height
+        </item>
+        <item name="fwf_account_settings_spinner_label_margin_top">
+            @dimen/fwf__account_settings_spinner_label_margin_top
+        </item>
+        <item name="fwf_account_settings_spinner_label_margin_bottom">
+            @dimen/fwf__account_settings_spinner_label_margin_bottom
+        </item>
+        <item name="fwf__account_settings_spinner_label_padding_end">
+            @dimen/fwf__account_settings_spinner_label_padding_end
+        </item>
+        <item name="fwf__account_settings_spinner_label_padding_start">
+            @dimen/fwf__account_settings_spinner_label_padding_start
+        </item>
+        <item name="fwf__default_text_size">@dimen/fwf__default_text_size</item>
+        <item name="fwf__account_settings_spinner_label_text_color">
+            @color/fwf__account_settings_spinner_label_text_color
+        </item>
+        <item name="fwf__account_settings_spinner_background_tint_color">
+            @color/fwf__account_settings_spinner_background_tint_color
+        </item>
+
+        <!-- debug menu -->
+        <item name="rodeo__debug_menu_header_text_color">@color/x11__Blue</item>
+        <item name="mdl__debug_menu__header_label_margin">@dimen/debug_menu__header_label_margin
+        </item>
+        <item name="mdl__debug_menu__header_padding">@dimen/debug_menu__header_padding
+        </item>
+        <item name="mdl__debug_menu__header_margin_left">@dimen/debug_menu__header_margin_left
+        </item>
+        <item name="mdl__debug_menu__version_name">@string/version_name</item>
+        <item name="mdl__debug_menu__jenkins_job_name">@string/jenkins_job_name</item>
+        <item name="mdl__debug_menu__jenkins_build_number">@string/jenkins_build_number</item>
+        <item name="mdl__debug_menu__git_head_hash">@string/git_head_hash</item>
+        <item name="fwf__address_text_size">24sp</item>
+        <item name="fwf__address_background_color">@color/x11__LightGrey</item>
+        <item name="fwf__editable_icon">@drawable/pencil_white</item>
+        <item name="fwf__data_reset_image">@drawable/fwf__data_reset</item>
+        <item name="fwf__address1_text">@string/fwf__address1_text</item>
+        <item name="fwf__address2_text">@string/fwf__address2_text</item>
+        <item name="fwf__city_text">@string/fwf__city_text</item>
+        <item name="fwf__zipcode_text">@string/fwf__zipcode_text</item>
+        <item name="fwf__calendar_icon_image_src">@drawable/calendar_grey</item>
+
+        <!-- Drawable Resources -->
+        <item name="fwf__data_quality_image_src">@drawable/fwf__data_quality_icon</item>
+        <item name="fwf__data_info_image_src">@drawable/fwf__data_ok</item>
+        <item name="fwf__data_reset_image_src">@drawable/fwf__data_reset</item>
+        <item name="fwf__pin_keypad_image_src">@drawable/ic_backspace_24dp</item>
+        <item name="fwf__chevron_right_image_src">@drawable/ic_chevron_right</item>
+        <item name="fwf__spinner_outline_image_src">@drawable/fwf__spinner_outline</item>
+        <item name="fwf__fwf__spinner_indicator_image_src">
+            @drawable/fwf__spinner_indicator_drawable
+        </item>
+        <item name="fwf__spinner_indicator_image_src">@drawable/fwf__spinner_indicator_drawable
+        </item>
+        <item name="fwf__card_view_collapse_image_src">@drawable/fwf__card_view_collapse</item>
+        <item name="fwf__checkbox_button_image_src">@drawable/fwf__checkbox_button</item>
+        <item name="fwf__background__menu_item_counter_image_src">
+            @drawable/background__menu_item_counter
+        </item>
+
+        <!-- Widgets Styles -->
+        <item name="fwf__default_widget_style">@style/fwf__DefaultWidgetStyle</item>
+        <item name="fwf__fab_widget_style">@style/fwf__FabOkWidgetStyle</item>
+        <item name="fwf__fab_widget_background_tint">@color/mdl__caribbean_shoreline_green</item>
+        <item name="fwf__fab_widget_src">@drawable/check_mark__white</item>
+        <item name="fwf__fab_widget_alternative_tint">@color/fwf__fab_background_warning</item>
+        <item name="fwf__fab_widget_alternative_src">
+            @drawable/fwf__data_quality_exception_character
+        </item>
+        <item name="fwf__fab_widget_ripple_color">@color/mdl__fab_ripple_color</item>
+        <item name="fwf__date_widget_style">@style/fwf__DateWidgetStyle</item>
+        <item name="fwf__card_view_style">@style/fwf__CardViewStyle</item>
+        <item name="fwf__family_member_card_view_style">@style/mdl__FamilyMemberCardViewStyle</item>
+        <item name="fwf__medication_card_view_style">@style/mdl__MedicationCardViewStyle</item>
+        <item name="fwf__procedures_card_view_style">@style/mdl__ProcedureCardViewStyle</item>
+        <item name="mdl__message_list_summary_card_view_style">
+            @style/mdl__MessageListSummaryCardViewStyle
+        </item>
+        <item name="fwf__checkbox_style">@style/fwf__CheckboxStyle</item>
+        <item name="fwf__spinner_item_style">@style/fwf__SpinnerStyle</item>
+
+        <item name="fwf__menu_button_style">@style/fwf__ButtonMenuStyle</item>
+        <item name="fwf__choice_button_style__ref">@style/fwf__ButtonChoiceStyle</item>
+
+        <item name="fwf__feature_button_style">@style/fwf__ButtonFeatureStyle</item>
+        <item name="fwf__feature_button_background">@drawable/fwf__feature_button_background</item>
+        <item name="fwf__feature_button_background_selected">
+            @drawable/fwf__button_focus_background
+        </item>
+        <item name="fwf__feature_button_background_pressed">
+            @color/fwf__feature_button_background_pressed
+        </item>
+        <item name="fwf__feature_button_background_normal">
+            @color/fwf__feature_button_background_normal
+        </item>
+        <item name="fwf__feature_button_height">@dimen/fwf__feature_button_height</item>
+        <item name="fwf__feature_button_padding">@dimen/fwf__feature_button_padding</item>
+        <item name="fwf__feature_button_text_size">@dimen/fwf__feature_button_text_size</item>
+        <item name="fwf__feature_button_text_color">@color/fwf__feature_button_text_color</item>
+
+        <item name="fwf__feature_button_wide_style">@style/fwf__ButtonFeatureWideStyle</item>
+
+        <item name="mdl__my_account_change_profile_picture_dialog_text_view_style">
+            @style/libCore__my_account_change_profile_picture_dialog_text_view_style
+        </item>
+        <item name="mdl__my_account_change_profile_picture_dialog_clickeable_bg_image_src">
+            @drawable/select_profile_picture_bg
+        </item>
+        <item name="fwf__user_profile_picture_size">@dimen/fwf__user_profile_picture_size</item>
+
+        <!-- Page styles -->
+        <item name="rodeo__page_instructions_text_color">@color/rodeo__accent_color_3</item>
+        <item name="rodeo__menu_background">@color/rodeo__menu_background</item>
+        <item name="rodeo__page_background_primary">@color/rodeo__page_background_primary</item>
+        <item name="rodeo__page_background_primary_padding">
+            @dimen/rodeo__page_background_primary_padding
+        </item>
+
+        <item name="rodeo__page_background_secondary">@color/rodeo__page_background_secondary</item>
+        <item name="rodeo__page_background_secondary_padding_start">
+            @dimen/rodeo__page_background_secondary_padding_start
+        </item>
+        <item name="rodeo__page_background_secondary_padding_end">
+            @dimen/rodeo__page_background_secondary_padding_end
+        </item>
+        <item name="rodeo__page_background_secondary_padding_top">
+            @dimen/rodeo__page_background_secondary_padding_top
+        </item>
+        <item name="rodeo__page_background_secondary_padding_bottom">
+            @dimen/rodeo__page_background_secondary_padding_bottom
+        </item>
+
+        <item name="fwf__scroll_bar_style">@style/fwf__ScrollBarStyle</item>
+        <item name="fwf__scroll_view_style">@style/fwf__ScrollViewStyle</item>
+
+        <item name="rodeo__page_instructions_style">@style/rodeo__PageInstructionsStyle</item>
+        <item name="rodeo__page_smaller_instructions_style">
+            @style/rodeo__PageSmallerInstructionsStyle
+        </item>
+        <item name="rodeo__page_title_style">@style/rodeo__PageTitleStyle</item>
+        <item name="rodeo__menu_layout_style">@style/rodeo__MenuLayoutStyle</item>
+        <item name="rodeo__accent_layout_style">@style/rodeo__AccentLayoutStyle</item>
+        <item name="rodeo__page_layout_style_primary">@style/rodeo__PageLayoutStylePrimary</item>
+        <item name="rodeo__page_layout_style_secondary">@style/rodeo__PageLayoutStyleSecondary
+        </item>
+        <item name="rodeo__button_dialog_cancel_style">@style/fwf__ButtonDialogCancelStyle</item>
+        <item name="rodeo__navigation_drawer_style">@style/rodeo__NavigationDrawerStyle</item>
+        <item name="rodeo__borderless_button_style">@style/rodeo__BorderlessButtonStyle</item>
     </style>
 </resources>

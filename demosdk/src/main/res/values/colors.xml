@@ -7,4 +7,5 @@
     <color name="cigna_blue2">#2999cb</color>
     <color name="fwf__menu_button_text">@color/w3c__green</color>
     <color name="fwf__near_black">@color/mdl__black</color>
+    <color name="rodeo__activity_title_text_color">@color/cigna_blue</color>
 </resources>

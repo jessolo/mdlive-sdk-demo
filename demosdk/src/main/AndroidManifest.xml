@@ -37,6 +37,12 @@
             android:theme="@style/MedicalHistoryStyle"
             tools:replace="android:theme" />
 
+        <activity
+            android:name="com.mdlive.mdlcore.activity.addmedication.MdlAddMedicationActivity"
+            android:theme="@style/MedicationsStyle"
+            tools:replace="android:theme" />
+
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.mdlive.demosdk.fileprovider"
